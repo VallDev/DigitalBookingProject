@@ -1,0 +1,19 @@
+
+.productList {
+    padding-bottom: 80px;
+}
+
+.productList .productCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.productList .H1 {
+    display: flex;
+    font-size: 24px;
+    margin: 20px 15px 0px 3vw;
+    color: #383B58;
+}
+

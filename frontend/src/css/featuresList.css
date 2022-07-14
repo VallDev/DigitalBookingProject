@@ -1,0 +1,35 @@
+.featuresList {
+    padding: 20px 0px 50px 0px;
+}
+
+
+.featuresList .featuresDetailed{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+}
+
+.featuresList .featuresDetailed .feature{
+    display: flex;
+    margin-left: 50px;
+    margin-top: 25px;
+}
+
+.featuresList .featuresDetailed .feature .Logo{
+    width: 18px;
+    margin-right: 10px;
+    filter: invert(79%) sepia(70%) saturate(4419%) hue-rotate(130deg) brightness(96%) contrast(77%);
+}
+
+
+@media(max-width: 700px) {
+    .featuresList .featuresDetailed{
+        grid-template-columns: 1fr ; 
+    }
+}
+
+@media(min-width: 701px) and (max-width: 1024px) {
+    .featuresList .featuresDetailed{
+        grid-template-columns: 1fr 1fr; 
+    }
+}

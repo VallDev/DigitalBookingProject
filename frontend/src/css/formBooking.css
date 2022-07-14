@@ -1,0 +1,44 @@
+.divFormBooking{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.divFormBooking .pError{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-left: 5%;
+    min-width: max-content;
+    background-color: #ff00001b;
+    padding: 25px 15px;
+    border-radius: 0px 0px 10px 10px;
+    box-sizing: border-box;
+    color: #CD1D1D;
+}
+@media(min-width: 701px) and (max-width: 1024px) {
+    .divFormBooking{
+        width: 100%;
+    }
+    .divFormBooking{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .divFormBooking .pError{
+        margin: 0% 4%;
+    }
+}
+@media(max-width: 700px) {
+    .divFormBooking{
+        width: 100%;
+    }
+    .divFormBooking .pError{
+        margin: 0px 0px 0px 5% !important;
+        width: 90%;
+        min-width: 90%;
+    }
+}
+

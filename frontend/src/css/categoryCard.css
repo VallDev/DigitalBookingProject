@@ -1,0 +1,54 @@
+.CategoryCard{
+    width: 22%;
+    max-height: 350px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.CategoryCard img{
+    width: 100%;
+    min-height: 80%;
+    max-height: 80%;
+    object-fit: cover;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.CategoryCard .categoryInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 20%;
+    justify-content: space-between;
+    padding: 5px 10px 15px 10px;
+    box-sizing: border-box;
+}
+
+
+.CategoryCard .categoryInfo .H2{
+    margin: 0;
+    font-size: 20px;
+    color:  #383B58;
+}
+
+.CategoryCard .categoryInfo .H3{
+    margin: 0;
+    color:  #383b588c;
+    font-size: 14px;
+}
+
+
+@media(max-width: 700px) {
+    .CategoryCard{
+        width: 90vw !important;
+        margin: 10px 0px;
+    }
+}
+
+@media(min-width: 701px) and (max-width: 1024px) {
+    .CategoryCard{
+        width: 45vw !important;
+        margin: 1.5vw 0vw;
+    }
+}

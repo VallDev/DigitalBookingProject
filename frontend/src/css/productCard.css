@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.productCard {
+    width: 46%;
+    height: 300px;
+    display: flex;
+    background-color: white;
+    margin-bottom: 2.7vw;
+    border-radius: 8px;
+    box-shadow: 3px 3px 12px 1px rgba(0, 0, 0, 0.25);
+}
+
+.productCard .information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    padding: 0px 14px 0px 14px;
+}
+
+
+.productCard .information .Link{
+    height: 40px;
+    width: 70%;
+    margin-bottom: 15px;
+}
+
+
+.productCard .information  a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #1DBEB4;
+    color: white;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    height: 100%;
+}
+
+.productCard .information  .Link :hover {
+    background-color: white;
+    color: #1DBEB4;
+    border: 1px #1DBEB4 solid;
+}
+
+
+.productCard .information .description{
+    height: 73.5%;
+    text-align: justify;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.productCard .information .description .Button{
+    background: none;
+    cursor: pointer;
+    border: none;
+    color: #1DBEB4;
+    font-size: 14px;
+}
+
+
+
+
+.productCard .information .summaryCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+    width: 100%;
+}
+
+
+.productCard .information .summaryCard .points {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.productCard .information .summaryCard .points .H3{
+    font-size: 14px;
+    border-radius: 6px;
+    text-align: right;
+}
+
+
+.productCard .information .summaryCard .points .H2{
+    background-color: #383B58;
+    color: white;
+    font-size: 19px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+
+.productCard .information .summaryCard .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.productCard .information .summaryCard .left{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.productCard .information .summaryCard .left .rating{
+    display: flex;
+    align-items: center;
+}
+
+.productCard .information .summaryCard .left .rating .H3{
+    font-size: 12px;
+    text-align: left;
+}
+.productCard .information .summaryCard .left .H2{
+    font-size: 16px;
+    text-align: left;
+}
+
+.stars{
+    display: flex;
+    align-items: center;
+    margin-left: 2px;
+}
+.stars > div{
+    display: flex;
+    align-items: center;
+    margin-left: 2px;
+}
+
+.stars .notHave{
+    filter: invert(60%);
+}
+
+.stars .have{
+    filter: invert(63%) sepia(52%) saturate(611%) hue-rotate(127deg) brightness(88%) contrast(93%);
+}
+
+
+
+
+.productCard .information .summaryCard .middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    height: 20%;
+}
+
+.productCard .information .summaryCard .middle .location{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+.productCard .information .summaryCard .middle .location .Button{
+    background: none;
+    border: none;
+    color: #1DBEB4;
+    margin-left: 4px;
+    cursor:pointer;
+    font-size: 11px;
+}
+
+.productCard .information .summaryCard .middle .location .Logo{
+    width: 12px;
+    filter: invert(20%);
+    margin-right: 10px;
+}
+
+.productCard .information .summaryCard .middle .features{
+    width: 100%;
+    display: flex;
+    padding: 5px 0px;
+}
+.productCard .information .summaryCard .middle .features .Logo{
+    width: 25px;
+    display: flex;
+    margin: 5px 15px 0px 0px;
+    filter: invert(20%);
+}
+
+
+
+
+
+.productCard .information .summaryCard .bot{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+.productCard .information .summaryCard .bot .P{
+    text-align: justify;
+    font-size: 14px;
+}
+.productCard .information .summaryCard .bot .P .Button{
+    background: none;
+    border: none;
+    color: #1DBEB4;
+    font-size: 14px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.productCard .image {
+    width: 60%;
+    
+}
+
+.productCard .image .Image {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 8px 0px 0px 8px;
+}
+
+
+
+@media(max-width: 700px) {
+    .productCard {
+        width: 80% !important;
+        min-height: 550px;
+        height: 60vh;
+        flex-direction: column !important;
+    }
+    .productCard .image {
+        width: 100% !important;
+        max-height: 55% !important;
+        min-height: 55% !important;
+    }
+    .productCard .image .Image {
+        border-radius: 8px 8px 0px 0px !important;
+        height: 100%;
+    }
+    .productCard .information {
+        width: 100% !important;
+        height: 60% !important;
+        padding: 0px !important;
+    }
+    .productCard .summaryCard {
+        height: 70% !important;
+        padding: 10px !important;
+    }
+    .productCard .information .summaryCard{
+        width: 90%;
+    }
+    .productCard .information .summaryCard .middle .features{
+        display: none !important;
+    }
+    .productCard .information .summaryCard .top{
+        align-items: flex-end !important;
+        margin: 0 !important;
+    }
+    .productCard .information .summaryCard .left{
+        justify-content: space-around;
+    }
+    .productCard .information .summaryCard .middle .location{
+        margin-bottom: 10px !important;
+    }
+}
+
+@media(min-width: 701px) and (max-width: 1024px) {
+    .productCard {
+        width: 80% !important;
+    }
+}

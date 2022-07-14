@@ -1,0 +1,57 @@
+.bodyBookingSuccessful{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height: 80vh;
+    width: 100vw;
+    
+}
+
+.bodyBookingSuccessful .divContenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 60%;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.bodyBookingSuccessful .divContenedor .Logo {
+    filter: invert(63%) sepia(52%) saturate(611%) hue-rotate(127deg) brightness(88%) contrast(93%);
+    height: 40%;
+    padding: 2% 3% 3% 3%;
+}
+
+.bodyBookingSuccessful .divContenedor .H3{
+    font-weight: bold;
+    font-size: 30px;
+    color: #1DBEB4;
+}
+
+.bodyBookingSuccessful .divContenedor .P{
+    font-size: 25px;
+    font-weight: bold;
+    color: #383B58;
+    padding: 0% 0% 2% 0%;
+}
+
+.bodyBookingSuccessful .divContenedor a{
+    width: 250px;
+    margin-bottom: 25px;
+    padding-top: 2%;
+}
+
+.bodyBookingSuccessful .divContenedor .Button{
+    padding: 3%;
+    width: 100%;
+    background-color: #1DBEB4;
+    border-style: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+

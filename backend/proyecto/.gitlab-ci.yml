@@ -1,0 +1,80 @@
+stages:
+    - build
+    - deploy
+
+build:
+    stage: build
+    image:  maven:3.8.3-openjdk-17
+    before_script:
+        - apk update && apk add openssh-client bash
+        - mkdir -p ~/.ssh
+        - eval $(ssh-agent -s)
+        - echo "$SSH_PRIVATE_KEY"| tr -d '\r' | ssh-add - > /dev/null
+        - touch ~/.ssh/config
+        - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+        - ssh-keyscan -H $DEPLOY_SERVER_IP >> ~/.ssh/known_hosts
+
+    script:
+        - echo "Building app..."
+        #- ssh -f ec2-user@$DEPLOY_SERVER_IP -L  127.0.0.1:3306:prueba-dbprivada-roan-sprint3.cbzkcexkyprq.us-west-2.rds.amazonaws.com:3306 -N 
+        #- cd proyect/
+        
+        #- cat /etc/*-release
+        #- cd proyect/src/main/resources/
+        #- ip4a=$(curl http://checkip.amazonaws.com)
+        #- echo $ip4a
+        #- cd ..
+        #- cd ..
+        #- cd ..
+        #- mvn clean 
+        #- mvn compile
+        #- mvn package
+        #- mvn -Dmaven.test.skip=true package
+        #- echo "Finished building the app."
+    #artifacts:
+       # paths:
+        #    - proyect/target/consoleapp.jar
+    #only:
+       # - main
+
+
+deploy:
+    stage: deploy
+    image: alpine:3.11
+    before_script:
+        - apk update && apk add openssh-client bash
+        - mkdir -p ~/.ssh
+        - eval $(ssh-agent -s)
+        - echo "$SSH_PRIVATE_KEY"| tr -d '\r' | ssh-add - > /dev/null
+        - touch ~/.ssh/config
+        - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+        - ssh-keyscan -H $DEPLOY_SERVER_IP >> ~/.ssh/known_hosts
+        - ssh ec2-user@$DEPLOY_SERVER_IP "ls -la"
+        
+    script:
+        - echo "Deploying started..." 
+        - ssh ec2-user@$DEPLOY_SERVER_IP "sudo systemctl stop consoleapp.service"
+        - ls -la
+        - cd backend/
+        - scp -r proyecto/ ec2-user@$DEPLOY_SERVER_IP:~/ 
+        - ssh ec2-user@$DEPLOY_SERVER_IP "ls -la"
+        
+        #- ssh ec2-user@$DEPLOY_SERVER_IP "cd codigo/proyect/"
+        #- scp proyect/target/consoleapp.jar ec2-user@$DEPLOY_SERVER_IP:~/console-app/
+        - ssh ec2-user@$DEPLOY_SERVER_IP "sudo cp proyecto/.gitignore /home/ec2-user/"
+        - ssh ec2-user@$DEPLOY_SERVER_IP "sudo cp proyecto/.gitlab-ci.yml /home/ec2-user/"
+        - ssh ec2-user@$DEPLOY_SERVER_IP "sudo cp -r proyecto/.mvn  /home/ec2-user/"
+        - ssh ec2-user@$DEPLOY_SERVER_IP "sudo cp proyecto/mvnw  /home/ec2-user/"
+        - ssh ec2-user@$DEPLOY_SERVER_IP "sudo cp proyecto/mvnw.cmd  /home/ec2-user/"
+        - ssh ec2-user@$DEPLOY_SERVER_IP "sudo cp proyecto/pom.xml /home/ec2-user/"
+        - ssh ec2-user@$DEPLOY_SERVER_IP "sudo cp -r proyecto/src /home/ec2-user/"
+        - ssh ec2-user@$DEPLOY_SERVER_IP "mvn package"
+        - ssh ec2-user@$DEPLOY_SERVER_IP "ls -la"
+        #- ssh ec2-user@$DEPLOY_SERVER_IP "mvn clean"
+        #- ssh ec2-user@$DEPLOY_SERVER_IP "mvn compile"
+        #- ssh ec2-user@$DEPLOY_SERVER_IP "mvn package"
+        - ssh ec2-user@$DEPLOY_SERVER_IP "sudo cp -r target/consoleapp.jar /home/ec2-user/console-app"
+        - ssh ec2-user@$DEPLOY_SERVER_IP "sudo systemctl start consoleapp.service"
+        - echo "Finished deploying the app."
+    only:
+        - main

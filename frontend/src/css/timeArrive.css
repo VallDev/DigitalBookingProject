@@ -1,0 +1,133 @@
+.divTimeArrive {
+    display: flex;
+    background-color: #efeffb;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.divInput {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+    justify-content: center;
+    box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.25);
+}
+
+.divTimeArrive h1{
+    width: 90%;
+    text-align: left;
+    margin: 20px 0px 20px 0px;
+    font-size: 2em;
+    color: #383B58;
+    font-weight: 600;
+}
+
+.divTimeArrive img {
+    filter: invert;
+    padding: 0px 10px;
+    width: 2%;
+    color: #383B58;
+}
+
+.divTopBlock {
+    padding: 10px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction:row;
+}
+
+.divTopBlock p{
+    padding: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #383B58;
+}
+
+
+.divInput .divSelect{
+    padding: 10px;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.divInput .divSelect label{
+    padding-left: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    color: #383B58;
+    font-weight: 600;
+    font-size: 14px;
+    padding-top: 10px;
+}
+.divInput .divSelect .divSelectShadow select{
+    width: 100%;
+    padding: 10px;
+    border-style:none;
+    border-radius: 8px;
+}
+
+.divInput .divSelect .divSelectShadow{
+    border-radius: 8px;
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin-bottom: 1%;
+}
+
+@media(min-width:701px) and (max-width:1024px){
+    .divTimeArrive h1{
+        font-size: 28px;
+        width: 100%;
+    }
+    .divTimeArrive {
+        padding: 20px 0px 0px 0px;
+        width: 90%;
+    }
+    .divInput .divSelect label{
+        padding-left: 0px;
+    }
+    .divInput .divSelect{
+        padding: 10px 20px;
+    }
+    .divInput {
+        margin-left: 0px;
+        width: 100%;
+    }
+}
+
+@media(max-width: 700px) {
+    .divInput .divSelect .divSelectShadow {
+        width: 100%;
+    }
+    .divInput .divSelect{
+        padding: 10px 20px;
+    }
+    .divInput .divSelect label{
+        padding-left: 0px;
+    }
+    .divTopBlock p{
+        text-align: left;
+        padding: 0;
+    }
+    .divTimeArrive img{
+        width: 22px;
+    }
+    .divTopBlock{
+        align-items: flex-start;
+        padding-top: 15px;
+    }
+    .divTimeArrive h1{
+        font-size: 26px;
+    }
+    .divTimeArrive {
+        box-sizing: border-box;
+    }
+
+}

@@ -1,0 +1,12 @@
+.sectionHeader .H1{
+    text-align: left;
+    margin: 15px 35px;
+    font-size: 24px;
+    color: #383B58 ;
+}
+
+.sectionHeader .Hr{
+    border: none;
+    border-top: 1px solid #1DBEB4;
+}
+

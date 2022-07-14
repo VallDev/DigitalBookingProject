@@ -1,0 +1,55 @@
+.divDoubleCalendarPhone{
+    display: none;
+}
+
+
+.rmdp-day:not(.rmdp-disabled):not(.rmdp-day-hidden) span:hover {
+    background-color: white !important;
+    color: black;
+}
+
+.rmdp-day-picker div div{
+    cursor: default !important; 
+}
+
+.rmdp-day span {
+    cursor: default !important; 
+}
+
+.rmdp-arrow-container:hover {
+    background-color: #1DBEB4;
+    box-shadow: 0 0 3px #8798ad;
+}
+
+.rmdp-arrow {
+    border-color: #1DBEB4;
+}
+
+.rmdp-week-day{
+    color: #1DBEB4;
+}
+
+@media(max-width: 700px) {
+    .divDoubleCalendarPhone{
+        display:inline-block;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .rmdp-calendar {
+        width: 100% !important;
+    }
+    
+    .rmdp-top-class{
+        width: 100%;
+    }
+    .rmdp-day-picker div div{
+        width: 100%;
+    }
+    .rmdp-wrapper{
+        width: 100% !important;
+    }
+    .rmdp-day-picker div{
+        width: 100%;
+    }
+}

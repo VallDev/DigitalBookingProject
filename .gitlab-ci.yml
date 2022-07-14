@@ -1,0 +1,27 @@
+stages:
+  - triggers
+
+front_ coverage_testing:
+  stage: triggers
+  trigger:
+    include: /frontend/src/test/.gitlab-ci.yml
+    
+
+back_ coverage_testing:
+  stage: triggers
+  trigger:
+    include: /backend/proyecto/src/test/java/com/digitalbooking/proyect/.gitlab-ci.yml
+
+
+
+front_deploy:
+  stage: triggers
+  trigger:
+    include: /frontend/.gitlab-ci.yml
+
+back_deploy:
+  stage: triggers
+  trigger:
+    include: /backend/proyecto/.gitlab-ci.yml
+
+

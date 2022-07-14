@@ -1,0 +1,65 @@
+.galeryPreview > .Image{
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 4px white solid;
+    box-sizing: border-box;
+}
+
+
+.galeryPreview{
+    width: 95%;
+    height: 100%;
+    display: flex;
+}
+
+
+.galeryPreview .rightBlock .Image{   
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 4px white solid;
+    box-sizing: border-box;
+}
+
+
+.galeryPreview .rightBlock {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+
+.galeryPreview .rightBlock .top {
+    display: flex;
+    height: 50%;
+    width: 100%;
+    min-height: 50%;
+}
+
+.galeryPreview .rightBlock .bot{
+    display: flex;
+    height: 50%;
+    width: 100%;
+    min-height: 50%;
+}
+
+
+.galeryPreview .Button{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: none;
+    border-radius: 16px;
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 6px;
+    bottom: 40px;
+    left: 83%;
+    width: 15%;
+
+}

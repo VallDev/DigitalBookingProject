@@ -1,0 +1,63 @@
+.divDoubleCalendarB{
+    display: flex;
+    margin-left: 20px;
+}
+
+
+.rmdp-day.rmdp-today span {
+    background-color:white !important;
+    color: black !important;
+}
+
+.rmdp-day:not(.rmdp-disabled):not(.rmdp-day-hidden) span:hover {
+    background-color: white !important;
+    color: black;
+}
+
+.rmdp-day-picker div div{
+    cursor: default !important; 
+}
+
+.rmdp-day span {
+    cursor: default !important; 
+}
+
+.rmdp-calendar {
+    width: 100% !important;
+}
+
+.rmdp-top-class{
+    width: 100%;
+}
+.rmdp-day-picker div{
+    width: 50%;
+}
+.rmdp-day-picker div div{
+    width: 100%;
+}
+.rmdp-wrapper{
+    width: 100% !important;
+    z-index: 0 !important;
+}
+
+.rmdp-arrow-container:hover {
+    background-color: #1DBEB4;
+    box-shadow: 0 0 3px #8798ad;
+}
+
+.rmdp-arrow {
+    border-color: #1DBEB4;
+}
+
+.rmdp-week-day{
+    color: #1DBEB4;
+}
+.rmdp-day-picker {
+    width: 100%;
+}
+
+@media(min-width:701px) and (max-width:1024px){
+    .divDoubleCalendarB{
+        margin-left: 0px !important;
+    }
+}

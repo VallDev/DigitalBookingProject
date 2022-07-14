@@ -1,0 +1,61 @@
+.divBookingButton{
+    padding: 10px 0px;
+    margin-left: 25px;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 5px #8798ad;
+    width: 95%;
+    margin-right: 20px;
+}
+.divBookingButton a{
+    background-color:#1DBEB4;
+    border-radius: 5px;
+    width: 90%;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    margin-top: 5px;
+    border-style: none;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.divBookingButton h3 {
+    font-size: 16px;
+    width: 90%;
+    text-align: left;
+    padding: 10px 0px 20px;
+}
+
+@media(min-width: 701px) and (max-width: 1024px) {
+    .divBookingButton{
+        margin-top: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%;
+    }
+    .divBookingButton h3{
+        text-align: center;
+    }
+}
+@media(max-width: 700px) {
+    .divBookingButton{
+        margin:20px 0px;
+        width: 100%;
+    }
+    .divBookingButton h3{
+        text-align: center;
+    }
+    
+}
+
+.backButton{
+    width: 100%;
+}

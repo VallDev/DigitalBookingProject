@@ -1,0 +1,10 @@
+
+test:
+  script:
+    - npm install
+    - npx nyc --reporter cobertura mocha
+  artifacts:
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage/cobertura-coverage.xml

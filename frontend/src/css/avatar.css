@@ -1,0 +1,13 @@
+.Avatar {
+    background-color: #383B58;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Avatar .H2 {
+    color: white;
+}

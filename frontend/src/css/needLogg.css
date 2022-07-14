@@ -1,0 +1,50 @@
+.needLogg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    min-width: max-content;
+    background-color: #ff00001b;
+    padding: 25px 15px;
+    border-radius: 10px;
+    margin-bottom: 45px;
+    box-sizing: border-box;
+}
+
+.needLogg .Logo{
+    width: 24px;
+    margin-right: 10px;
+    filter: invert(12%) sepia(66%) saturate(6090%) hue-rotate(355deg) brightness(107%) contrast(88%);
+}
+
+.needLogg .P{
+    font-size: 20px;
+    color: #cd1d1d;
+}
+
+@media(max-width: 700px) {
+    .needLogg{
+        width: 70vw;
+    }
+    .needLogg .Logo{
+        width: 24px;
+    }
+    
+    .needLogg .P{
+        font-size: 16px;
+    }
+}
+
+
+@media(min-width: 701px) and (max-width: 1024px) {
+    .needLogg{
+        width: 50vw;
+    }
+    .needLogg .Logo{
+        width: 24px;
+    }
+    
+    .needLogg .P{
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,68 @@
+.productPolicies {
+    padding-bottom: 95px;
+}
+
+.divBookingContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: #EFEFFB;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-height: 1250px;
+}
+
+.divBookingContainer .needLogg{
+    margin-top: 40px;
+}
+
+
+.divBookingDetailed{
+    padding: 40px 0px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+}
+
+@media(min-width:701px) and (max-width:1024px){
+    .divBookingDetailed{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .divBookingDetailed .divBookingContainer{
+        width: 100%;
+    }
+    .divBookingContainer{
+        height: max-content !important;
+    }
+}
+
+@media(max-width: 700px) {
+    .divBookingDetailed{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .divBookingContainer{
+        height: max-content !important;
+    }
+    .divBookingContainer .needLogg{
+        flex-direction: column;
+        max-width: 100%;
+        min-width: 100% !important;
+        padding: 10px;
+        border-radius: 0px;
+        margin: 50px 0px 0px 0px;
+    }
+    .divBookingContainer .needLogg .P{
+        width: 100%;
+    }
+    .divBookingContainer .needLogg .Logo{
+        margin-bottom: 5px;
+    }
+    
+}

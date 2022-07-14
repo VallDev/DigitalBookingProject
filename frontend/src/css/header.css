@@ -1,0 +1,404 @@
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 4px 5px rgba(0, 0, 0, 0.12), 0px 1px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    align-items: center;
+    top: 0;
+    z-index: 999;
+    height: 100px;
+}
+
+header a{
+    text-decoration: 0;
+}
+
+h1 {
+    color: black
+}
+
+.Left  {
+    display: flex;
+    align-items: flex-start;
+    align-items: flex-end;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.Left .H1 {
+    font-size: 1.5vw;
+    font-style: italic;
+    margin: 0;
+    margin-left: 10px;
+    font-weight: lighter;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.Left .Logo {
+    width: 15vw;
+    border-radius: 4px;
+}
+
+.Right  {
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.Right .RightLogged {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 10px;
+    width: 100%;
+}
+
+.Right .RightLogged .User {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.Right .RightLogged .adminButton {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.Right .RightLogged .adminButton > a{
+    text-decoration: none;
+    color:#383B58;
+    font-weight: bold;
+}
+
+.Right .RightLogged .adminButton .Hr{
+    margin-left: 20px;
+    height: 60px;
+    width: 2px;
+    border: none;
+    background-color: #1DBEB4;
+    border-radius: 70%;
+}
+
+.Right .RightLogged .User .UserInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+
+.Right .RightLogged .User .UserInfo .H2 {
+    font-weight:normal;
+    font-size: 16px;
+    margin: 0px 10px;
+}
+.Right .RightLogged .User .UserInfo .H2 > span {
+    color: #545776;
+    font-weight: bold;
+}
+
+
+.Right .RightLogged .User .UserInfo .H2 .secondValue {
+    color: #1DBEB4;
+}
+
+.Right .RightLogged  > button{
+    position: absolute;
+    top: 5px;
+    font-weight: bold;
+    cursor: pointer;
+	outline: inherit;
+    background: none;
+    border: none;
+    font-size: 16px;
+}
+
+
+
+.Right .RightUnlogged {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 10px;
+    width: 100%;
+}
+
+.Right .RightUnlogged a{
+    text-decoration: none;
+    width: 200px;
+}
+.RightUnlogged a p{
+    font-weight: bold;
+}
+
+
+.RightUnlogged .toLogIn {
+    margin: 0px 5px;
+    background-color: white;
+    border: #1DBEB4 2px solid;
+    border-radius: 5px;
+    padding: 10px;
+    color:#1DBEB4;
+}
+
+.RightUnlogged .toRegister{
+    margin: 0px 5px;
+    background-color: white;
+    border: #1DBEB4 2px solid;
+    border-radius: 5px;
+    padding: 10px;
+    color:#1DBEB4;
+}
+
+.RightUnlogged a p:hover{
+    background: #1DBEB4;
+	color: white;
+}
+
+.Right > .Button {
+    background: none;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+	outline: inherit;
+    filter: invert(40%);
+    margin-right: 10px;
+}
+
+.Menu{
+    position: absolute;
+    background-color: white;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    top:0;
+    animation: slide 1s;
+}
+
+
+@keyframes slide {
+    0%{
+        right: -100vw;
+    }
+    100%{
+        right: 0;
+    }
+}
+
+
+.Menu .MenuTop{
+    background-color: #1DBEB4;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.Menu .MenuTop .xButton{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.Menu .MenuTop .xButton .Logo{
+    width: 10%;
+    height: 100%;
+    filter: invert(100%);
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+
+.Menu .MenuTop .MenuTopUnlogged .H2{
+    color: white;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.Menu .MenuTop .MenuTopLogged .User{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+.Menu .MenuTop .MenuTopLogged .User .Avatar{
+    background-color: white;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+.Menu .MenuTop .MenuTopLogged .User .Avatar .H2{
+    color: #545776;
+}
+
+
+.Menu .MenuTop .MenuTopLogged .UserInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+
+.Menu .MenuTop .MenuTopLogged .UserInfo .H2{
+    font-weight:bold;
+    font-size: 14px;
+    margin: 0px 10px;
+}
+
+.Menu .MenuTop .MenuTopLogged .UserInfo .H2 .firsValue{
+    color: white;
+}
+
+
+
+
+
+.MenuBottom{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Menu .MenuBottom .MenuBottomUnlogged{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 15px 5px;
+}  
+
+.Menu .MenuBottom .MenuBottomLogged{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+    height: 100%;
+    margin: 0px 5px;
+    width: 100%;
+} 
+
+.Menu .MenuBottom .MenuBottomLogged .adminButton{
+    padding: 10px 2px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}  
+
+.Menu .MenuBottom .MenuBottomLogged .adminButton > a{
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    color: black;
+}  
+
+.Menu .MenuBottom .MenuBottomLogged .adminButton .Hr{
+    width: 70%;
+    margin-top: 20px;
+}  
+
+.Menu .MenuBottom .MenuBottomLogged .Button{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 0px;
+}  
+
+.Menu .MenuBottom .MenuBottomLogged span{
+    color: #1DBEB4;
+}  
+
+.Menu .MenuBottom .MenuBottomUnlogged a{
+    text-decoration: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin: 20px 0px;
+}   
+
+
+.Menu .MenuBottom .Networks{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+}  
+
+.Menu .MenuBottom .Networks .Logo{
+    width: 30px;
+    margin: 0px 5px;
+    filter: invert(40%);
+}  
+
+.MenuBottom Hr{
+    width: 70%;
+    color: #ededed;
+    
+}
+
+
+
+@media(min-width: 700px) {
+    .Right > .Button{
+        display: none !important;
+    }
+}
+
+@media(max-width: 700px) {
+    .RightUnlogged a{
+        display: none !important;
+    }
+    .Left .H1{
+        display: none !important;
+    }
+    .Left .Logo {
+        width: 180px !important;
+    }
+    .Right .RightLogged  {
+        display: none !important;
+    }
+    .Right{
+        justify-content: flex-end;
+    }
+}
+
+
+@media(min-width: 701px) and (max-width: 1024px) {
+    .Left .Logo {
+        width: 180px !important;
+    }
+    .Left .H1{
+        display: none;
+    }
+    .Right .RightLogged .User .UserInfo{
+        width: max-content;
+    }
+}
+
+
+
+

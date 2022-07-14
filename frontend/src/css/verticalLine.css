@@ -1,0 +1,19 @@
+.divVerticalLine{
+    width: 2px;
+    position: relative;
+    right: Calc(50% - 1px);
+    background-color: #d4d3d1;
+    z-index: 1;
+    margin: 15px 0px;
+    border-radius: 50%;
+}
+
+@media(min-width:701px) and (max-width:1024px){
+}
+
+@media(max-width: 700px) {
+    .divVerticalLine{
+        display: none;
+    }
+    
+}

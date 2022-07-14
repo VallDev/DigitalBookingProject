@@ -1,0 +1,84 @@
+.productGallery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50vh;
+    margin-top: 20px;
+}
+
+.productGallery .carousel{
+    display: none;
+}
+
+.productGallery .galleryOpened  {
+    position: fixed;
+    background-color: rgba(56, 59, 88,0.95);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    z-index: 40;
+}
+
+.productGallery .galleryOpened .buttonContainer{
+    height: calc(100vh - 200px) !important;
+}
+.productGallery .galleryOpened .buttonContainer .Button{
+    padding: 10px 16px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    position: relative;
+    right: 48px;
+    top: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0,0.5);
+}
+
+
+.image-gallery-bullets .image-gallery-bullet:hover {
+
+    background: #1DBEB4 !important;
+    border: 1px solid #1DBEB4 !important;
+
+}
+
+.image-gallery-image{
+    height: calc(100vh - 200px) !important;
+    width: calc(100vw - 200px) !important;
+    object-fit: cover !important;
+}
+
+.image-gallery-icon:hover {
+    color: #1DBEB4 !important;
+}
+
+.image-gallery{
+    margin-top: 30px;
+}
+
+
+@media(max-width: 1024px) {
+    .productGallery {
+        margin-top: 0px !important;
+    }
+    .productGallery .galeryPreview{
+        display: none !important;
+    }
+    .productGallery .carousel{
+        display: inherit !important;
+    }
+    .productGallery .carousel .image-gallery-image{
+        height: calc(70vh - 200px) !important;
+        width: calc(100vw) !important;
+        object-fit: cover !important;
+    }
+    .productGallery .carousel .image-gallery{
+        margin-top: 0px;
+    }
+}

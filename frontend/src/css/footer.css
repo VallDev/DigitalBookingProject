@@ -1,0 +1,39 @@
+footer{
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    z-index: 998;
+    background-color: #1DBEB4;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+footer .H2{
+    color: white;
+    font-size: 16px;
+    margin-left: 15px;
+}
+
+
+footer .Networks{
+    display: flex;
+    align-items: center;
+    padding-right: 2%;
+}
+
+footer .Networks .Logo{
+    width: 30px;
+    margin: 10px;
+    filter: invert();
+}
+
+
+@media(max-width: 700px) {
+    footer .Networks{
+        display: none !important;
+    }
+}
+

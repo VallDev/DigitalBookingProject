@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.registerForm {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 20px;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+}
+
+.registerForm .H1{
+    display: flex;
+    color: #1DBEB4;
+    font-size: 2.2vw;
+    margin-bottom: 20px;
+}
+
+.registerForm .container a{
+    margin-top: 15px;
+    padding-bottom: 30%;
+    text-decoration: none;
+    color: inherit;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.registerForm .container a p > span{
+    color: #1DBEB4;
+    margin-left: 5px;
+}
+
+.registerForm .container form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.registerForm .container form .P{
+    font-size: 12px;
+    padding: 5px;
+    margin-top: 8px;
+    color: rgb(158, 16, 68);
+}
+
+.registerForm .container .toLogIn{
+    display: flex;
+}
+
+.registerForm .container form > input{
+    margin-top: 20px;
+    padding: 10px;
+    height: 12%;
+    width: 100%;
+    color: white;
+    background-color: #1DBEB4;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2vw;
+    cursor: pointer;
+}
+
+.registerForm .container{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.registerForm .container .inputField{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.registerForm .container .inputField input{
+    height: 40px;
+    width: 100%;
+    border: none;
+    box-shadow: 0px 1px 10px 0px #00000026;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.registerForm .container .inputField > label{
+    font-size: 12px;
+    padding:  8px 0px;
+}
+
+
+.registerForm .container .username{
+    display: flex;
+    width: 100%;
+}
+
+.registerForm .container .username .name{
+    width: 45%;
+    margin-right: 5%;
+}
+
+.registerForm .container .username .lastname{
+    width: 50%;
+}
+
+
+@media(max-width: 700px) {
+    .registerForm .container .toLogIn{
+        display: flex;
+        padding: 5px;
+    }
+    .registerForm .container{
+        width: 70% !important;
+    }
+    .registerForm .H1{
+        font-size: 32px !important;
+    }
+    .registerForm .container form{
+        height: 100% !important;
+    }
+    .registerForm .container form > input{
+        font-size: 16px !important;
+        width: 70% !important;
+        height: 50px !important;
+    }
+    .registerForm .container form .P{
+        font-size: 11px;
+        width: 120% !important;
+    }
+    .registerForm .container .username{
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+    .registerForm .container .username .P{
+        width: 100% !important;
+    }
+    .registerForm .container .username .name{
+        width: 100% !important;
+    }
+    .registerForm .container .username .lastname{
+        width: 100% !important;
+    }
+    
+}
+
+
+@media(min-width: 701px) and (max-width: 1024px) {
+    .registerForm .container{
+        width: 50% !important;
+    }
+    .registerForm .H1{
+        font-size: 28px !important;
+    }
+    .registerForm .container form > input{
+        font-size: 18px !important;
+    }
+    
+}

@@ -1,0 +1,80 @@
+.locationHeader {
+    background-color: #F3F1ED;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 8vh;
+}
+
+
+.locationHeader .points > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.locationHeader .points > div .H3{
+    font-size: 16px;
+    text-align: right;
+}
+
+.locationHeader .points .stars .Logo {
+    width: 16px;
+    margin-bottom: 5px;
+}
+
+
+.locationHeader .points  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.locationHeader .points .H2 {
+    order: 2;
+    background-color: #545776;
+    padding: 5px 10px;
+    border-radius: 8px;
+    color: white;
+    margin: 0px 8px;
+}
+
+.locationHeader .locationDetailed {
+    margin-left: 30px;
+}
+
+.locationHeader .locationDetailed .Logo{
+    width: 15px;
+    filter: invert(40%);
+    margin-right: 8px;
+}
+
+.locationHeader .locationDetailed .P{
+    font-size: 16px;
+    color: #545776;
+}
+
+.locationHeader .locationDetailed > div{
+    display: flex;
+}
+
+.locationHeader .locationDetailed > .P {
+    text-align: left;
+    margin-left: 23px
+}
+
+
+@media(max-width: 700px) {
+    .locationHeader .locationDetailed .P{
+        font-size: 14px; 
+    }
+    .locationHeader .locationDetailed > .P{
+        display: none !important;
+    }
+}
+
+@media(min-width: 701px) and (max-width: 1024px) {
+    .locationHeader .locationDetailed .P{
+        grid-template-columns: 1fr 1fr; 
+    }
+}

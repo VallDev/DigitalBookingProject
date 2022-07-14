@@ -1,0 +1,29 @@
+
+.productPolicies{
+    padding-top: 40px;
+}
+
+.policies{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+}
+
+.policies .detailedDescription .H1{
+    font-size: 20px;
+    color: #545776;
+}
+
+
+
+@media(max-width: 700px) {
+    .policies{
+        grid-template-columns: 1fr ; 
+    }
+}
+
+@media(min-width: 701px) and (max-width: 1024px) {
+    .policies{
+        grid-template-columns: 1fr 1fr; 
+    }
+}

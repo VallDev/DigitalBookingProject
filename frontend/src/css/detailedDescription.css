@@ -1,0 +1,25 @@
+.detailedDescription {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 40px;
+}
+
+.detailedDescription .H1{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.detailedDescription .P{
+    text-align: left;
+}
+
+.detailedDescription .P .P{
+    margin-top: 10px;
+}
+
+@media(max-width: 700px) {
+    .detailedDescription .H1{
+        font-size: 20px;
+    }
+}

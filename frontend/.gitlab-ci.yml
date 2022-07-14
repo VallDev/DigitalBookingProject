@@ -1,0 +1,83 @@
+image: maven:3.6.3-openjdk-11
+ 
+variables:
+  MAVEN_OPTS: >-
+    -Dmaven.repo.local=.m2/repository
+    -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=WARN
+    -Dorg.slf4j.simpleLogger.showDateTime=true -Djava.awt.headless=true
+  MAVEN_CLI_OPTS: >-
+    --batch-mode --errors --fail-at-end --show-version -DinstallAtEnd=true
+    -DdeployAtEnd=true
+  CI_AWS_ECS_CLUSTER: frontg9cluster
+  CI_AWS_ECS_SERVICE: frontg9service
+  CI_AWS_REGISTRY_IMG: 145504712931.dkr.ecr.us-west-2.amazonaws.com/frontg9
+ 
+before_script:
+  - >-
+    echo " ------------------------------- Global > Before Script
+    ------------------------- ------"
+  - echo $CI_COMMIT_BRANCH
+  
+stages:
+  - build
+  - deploy
+ 
+kaniko-build-docker :
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  stage: build
+  variables:
+    REGISTRY: $CI_AWS_REGISTRY_IMG
+  before_script:
+    - ls -la
+  only:
+    - main
+  script:
+    # see https://github.com/GoogleContainerTools/kaniko/issues/1227
+    - mkdir -p /kaniko/.docker
+    - echo "{\"credsStore\":\"ecr-login\"}" > /kaniko/.docker/config.json
+    - /kaniko/executor --cache=true --context ${CI_PROJECT_DIR}/frontend --dockerfile ${CI_PROJECT_DIR}/frontend/Dockerfile --destination $REGISTRY:$CI_COMMIT_SHORT_SHA --destination $REGISTRY:latest 
+
+dfrontec2:
+  image: node:17
+  stage: build
+  cache:
+    paths:
+      - node_modules/
+  only:
+    - main
+  before_script:
+    - ls -la
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - mkdir -p ~/.ssh
+    - eval $(ssh-agent -s)
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    - apt-get update -qq && apt-get install -y -qq sshpass rsync
+  script:
+    - cd frontend/
+    - npm install
+    - CI=false npm run build 
+    #- cd build/
+    - ls
+    - ssh-add <(echo "$USER_PASS")
+    #- ssh -o StrictHostKeyChecking=no $USER_NAME@$SERVER_IP 'rm -rf /var/www/html/*'
+    - scp -v -r build/ $USER_NAME@$SERVER_IP:/var/www/html    
+ 
+deploy:
+  image: python:3.8
+  stage: deploy
+  only:
+    - main
+  before_script:
+    - pip install ecs-deploy
+  needs:
+    - kaniko-build-docker
+  script:
+    - ecs deploy $CI_AWS_ECS_CLUSTER $CI_AWS_ECS_SERVICE -t $CI_COMMIT_SHORT_SHA --timeout 600
+
+#comentando algo
+
+
+
+

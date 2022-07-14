@@ -1,0 +1,33 @@
+
+[
+    {
+        "id": "1",
+        "type": "Hotels",
+        "amount": "807.105",
+        "picture": "https://cdn2.paraty.es/ona-corporativa/images/889b4a30a287538_v6.jpeg=s1900"
+    },
+    {
+        "id": "2",
+        "type": "Hostels",
+        "amount": "201.150", 
+        "picture": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/bd/5d/3a/urban-garden-hostel.jpg?w=1000&h=600&s=1"
+    },
+    {   
+        "id": "3",
+        "type": "Apartments",
+        "amount": "20.184",
+        "picture": "https://images.ctfassets.net/8lc7xdlkm4kt/1yHV96Ob5sDjmOg9IH3Iux/b21e5922f8f4db2e30d201adacb5c61b/castelo-natura-apartamentos-cundinamarca-cocina.jpg" 
+    },
+    {
+        "id": "4",
+        "type": "Bed and Breakfast",
+        "amount": "7.050",
+        "picture": "https://www.kayak.com.sv/rimg/kimg/6a/f0/7539a78b-15f2fda4257.jpg?width=1366&height=768&crop=true"
+    },
+    {
+        "id": "4",
+        "type": "Bed and Breakfast",
+        "amount": "7.050",
+        "picture": "https://www.kayak.com.sv/rimg/kimg/6a/f0/7539a78b-15f2fda4257.jpg?width=1366&height=768&crop=true"
+    }
+]

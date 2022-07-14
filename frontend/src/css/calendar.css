@@ -1,0 +1,39 @@
+.divCalendar {
+    width: 35%;
+    height: 100%;
+}
+
+.pCalendar {
+    margin: 0px;
+    opacity: 0.8;
+}
+
+.iconCalendar {
+    width: 15px;
+    margin-right: 5px;
+    opacity: 0.8;
+}
+
+.buttonCalendar {
+    height: 100%;
+    width:100%;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    color:#545776;
+    display: inline-flex;
+    align-items:center;
+    justify-content: start;
+    border-style:none;
+    box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.552);
+}
+
+@media(max-width: 700px) {
+    .divCalendar{
+        width: 100% !important;
+        height: 20%;
+    }
+    .buttonCalendar{
+        margin: 2.5px 0px !important;
+    }
+}

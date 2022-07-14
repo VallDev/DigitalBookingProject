@@ -1,0 +1,364 @@
+.createProductTemplate{
+    background-color: #5457761f;
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.formContainer .H1{
+    font-size: 28px;
+    text-align: left;
+    margin: 60px 0px 20px 0px;
+    width: 95%;
+    color: #383B58;
+}
+
+.productForm{
+    width: 95%;
+    background-color: white;
+    padding: 50px 20px 5px 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 20px 0px 100px 0px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productForm .P{
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    color: #a92424;
+}
+
+.productForm .basicProductForm{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+}
+
+.productForm .basicProductForm .topForm, .botForm{
+    display: flex;
+    justify-content: space-between;
+}
+
+.basicProductForm .input-field{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    padding: 25px 0px;
+    box-sizing: border-box;
+}
+
+.basicProductForm .input-field .productInput, .productSelect{
+    border: none;
+    background: transparent;
+    height: 50px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.basicProductForm .input-field .productSelect:focus{ 
+    outline: none;
+    background: transparent;
+}
+
+.basicProductForm .input-field .productLabel{
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #383B58;
+}
+
+.basicProductForm .titleDescriptionBasic{
+    width: 100%;
+}
+
+.basicProductForm .description{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.basicProductForm .description .productInput{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 150px;
+    resize: none;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.basicProductForm .input-field .productSelect{ 
+    background-color: white;
+    border: none;
+}
+.basicProductForm .input-field .productSelect option{ 
+    background-color: white;
+}
+
+
+.createProductTemplate .productForm .H2{
+    text-align: left;
+    width: 95%;
+    margin: 25px 0px;
+    color: #383B58;
+}
+
+.allFeaturesProductForm{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 95%;
+}
+
+.allFeaturesProductForm .featureProductForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 20px;
+    height: 120px;
+    background-color: #5552710c;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.allFeaturesProductForm .featureProductForm .featureLabel{
+    text-align: left;
+    margin-bottom: 6px;
+    color: #383B58;
+}
+
+.allFeaturesProductForm .featureProductForm .featureLine{
+    display: flex;
+    height: 60%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.allFeaturesProductForm .featureProductForm .featureLine .feature-field{
+    width: calc(90% - 50px);
+    height: 100%;
+}
+
+.allFeaturesProductForm .featureProductForm .featureLine .feature-field .featuresSelect{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: white;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 8px;
+    color: #646464;
+}
+
+.allFeaturesProductForm .featureProductForm .featureLine .buttonContainer{
+    height: 100%;
+    width: 50px;
+}
+
+.allFeaturesProductForm .featureProductForm .featureLine .buttonContainer .Button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #1DBEB4;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.allFeaturesProductForm .featureProductForm .featureLine .buttonContainer .Button .Logo{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: invert(100%);
+}
+
+
+
+
+.allFeaturesProductForm .featureProductForm .featureLine .feature-icon{
+    height: 100%;
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+}
+.allFeaturesProductForm .featureProductForm .featureLine .feature-icon .Logo{
+    height: 70%;
+    filter: invert(20%) sepia(21%) saturate(1008%) hue-rotate(197deg) brightness(96%) contrast(87%);
+}
+
+.rulesProductForm{
+    display: flex;
+    width: 95%;
+    box-sizing: border-box;
+    padding: 20px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.rulesProductForm .input-block{
+    width: 33%;
+    padding-bottom: 25px;
+}
+
+.rulesProductForm .input-block .H2{
+    text-align: left;
+    margin: 20px 0px 5px 25px;
+    font-size: 18px;
+}
+.rulesProductForm .input-block .H3{
+    text-align: left;
+    padding: 15px 0px 15px 25px;
+    font-size: 14px;
+    color: #383B58;
+}
+
+
+
+.rulesProductForm .input-block .ruleTextArea{
+    width: 90%;
+    box-sizing: border-box;
+    padding: 15px;
+    resize: none;
+    height: 200px;
+    border: none;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.createProductTemplate .allImageProductForm {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.createProductTemplate .allImageProductForm .imageProductForm{
+    width: 95%;
+    background-color: #5552710c;
+    margin: 5px 0px;
+    height: 100px;
+    display: flex;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.createProductTemplate .allImageProductForm .imageProductForm .imageInput{
+    width: calc(98% - 50px);
+    height: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+.createProductTemplate .allImageProductForm .imageProductForm .Button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #1DBEB4;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.createProductTemplate .allImageProductForm .imageProductForm .Button .Logo{
+    width: 100%;
+    height: 70%;
+    filter: invert(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.createProductTemplate .allImageProductForm .imageProductForm .buttonContainer{
+    width: 50px;
+    height: 50%;
+}
+
+.createProductTemplate .formContainer .productForm .sendButton{
+    border: none;
+    background-color: #1DBEB4;
+    color: white;
+    margin: 35px 0px;
+    padding: 20px 50px;
+    font-size: 18px;
+    border-radius: 8px;
+    width: 40%;
+    cursor: pointer;
+}
+
+
+@media(max-width: 700px) {
+    .productForm .basicProductForm .topForm, .botForm {
+        display: flex;
+        flex-direction: column;
+    }
+    .productForm .input-field {
+        width: 100%;
+    }
+    .productForm {
+        width: 100%;
+        border-radius: 0;
+    }
+    .basicProductForm .description .productInput {
+        height: 250px;
+    }
+    .rulesProductForm{
+        flex-direction: column;
+    }
+    .rulesProductForm .input-block{
+        width: 100%;
+    }
+    .allFeaturesProductForm .featureProductForm .featureLine .feature-field{
+        width: 60% !important;
+    }
+    .allFeaturesProductForm .featureProductForm .featureLine .feature-icon{
+        width: 15% !important;
+    }
+    
+}
+
+
+
+@media(min-width: 701px) and (max-width: 1024px) {
+    .allFeaturesProductForm .featureProductForm .featureLine .feature-field{
+        width: 75% !important;
+    }
+    .allFeaturesProductForm .featureProductForm .featureLine .feature-icon{
+        width: 10% !important;
+    }
+    .rulesProductForm{
+        flex-direction: column;
+    }
+    .rulesProductForm .input-block{
+        width: 100%;
+    }
+    .rulesProductForm .input-block .H3{
+        margin-left: 2px;
+    }
+}
